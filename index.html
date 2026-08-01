@@ -73,11 +73,13 @@
     .section-header p{color:var(--text-light);font-size:1rem;max-width:550px;margin:14px auto 0;line-height:1.8}
     .divider{width:60px;height:3px;background:linear-gradient(to left,var(--turquoise),var(--navy-light));border-radius:3px;margin:16px auto 0}
     .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
-    .service-card{background:var(--white);border:1px solid rgba(0,0,0,0.07);border-radius:16px;padding:36px 28px;text-decoration:none;color:inherit;transition:all 0.35s;position:relative;overflow:hidden}
-    .service-card::before{content:'';position:absolute;top:0;right:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--navy),var(--turquoise));transform:scaleY(0);transition:transform 0.35s;transform-origin:top}
-    .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(13,92,74,0.12);border-color:rgba(13,92,74,0.15)}
+    .service-card{background:var(--white);border:1px solid rgba(0,0,0,0.07);border-radius:16px;text-decoration:none;color:inherit;transition:all 0.35s;position:relative;overflow:hidden}
+    .service-card::before{content:'';position:absolute;top:0;right:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--navy),var(--turquoise));transform:scaleY(0);transition:transform 0.35s;transform-origin:top;z-index:2}
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(14,42,74,0.15);border-color:rgba(14,42,74,0.15)}
     .service-card:hover::before{transform:scaleY(1)}
-    .service-icon{width:60px;height:60px;background:linear-gradient(135deg,rgba(13,92,74,0.08),rgba(43,168,160,0.08));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:20px;transition:all 0.35s}
+    .service-card-img{width:100%;height:170px;object-fit:cover;display:block}
+    .service-card-body{padding:28px 28px 32px}
+    .service-icon{width:60px;height:60px;background:linear-gradient(135deg,rgba(14,42,74,0.08),rgba(43,168,160,0.08));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:20px;transition:all 0.35s}
     .service-card:hover .service-icon{background:linear-gradient(135deg,var(--navy),var(--navy-light))}
     .service-card h3{font-size:1.1rem;font-weight:700;margin-bottom:10px;color:var(--text-dark)}
     .service-card p{font-size:0.88rem;color:var(--text-light);line-height:1.7;margin-bottom:20px}
@@ -190,12 +192,43 @@
     <div class="divider"></div>
   </div>
   <div class="services-grid">
-    <a href="services/deep-cleaning/index.html" class="service-card fade-in"><div class="service-icon">🏠</div><h3>التنظيف العميق</h3><p>تنظيف شامل للمنازل والفلل والقصور بأحدث المعدات ومواد تعقيم آمنة على الصحة.</p><span class="service-link">اعرف أكثر ←</span></a>
-    <a href="services/pest-control/index.html" class="service-card fade-in"><div class="service-icon">🛡️</div><h3>مكافحة الحشرات والقوارض</h3><p>القضاء التام على الحشرات والقوارض بأفضل الطرق العلمية مع ضمان موثق.</p><span class="service-link">اعرف أكثر ←</span></a>
-    <a href="services/tanks/index.html" class="service-card fade-in"><div class="service-icon">💧</div><h3>تنظيف الخزانات</h3><p>تنظيف وتعقيم خزانات المياه العلوية والأرضية لضمان مياه نظيفة وصحية لأسرتك.</p><span class="service-link">اعرف أكثر ←</span></a>
-    <a href="services/ac-curtains/index.html" class="service-card fade-in"><div class="service-icon">❄️</div><h3>تنظيف المكيفات والستائر</h3><p>تنظيف المكيفات بالبخار للحصول على هواء نقي وخالٍ من الجراثيم والأتربة.</p><span class="service-link">اعرف أكثر ←</span></a>
-    <a href="services/sofa/index.html" class="service-card fade-in"><div class="service-icon">🛋️</div><h3>تنظيف المجالس والكنب</h3><p>إزالة البقع والأوساخ العميقة من المجالس والكنب بأساليب متخصصة تحافظ على جودة القماش.</p><span class="service-link">اعرف أكثر ←</span></a>
-    <a href="services/floors/index.html" class="service-card fade-in"><div class="service-icon">✨</div><h3>تنظيف الأرضيات والحوائط</h3><p>تلميع الأرضيات وتنظيف الحوائط بأحدث المعدات المتخصصة للحصول على لمعان مثالي.</p><span class="service-link">اعرف أكثر ←</span></a>
+    <a href="services/deep-cleaning/index.html" class="service-card fade-in"><img src="images/services/deep-cleaning-card.jpg" alt="التنظيف العميق" class="service-card-img" loading="lazy"><div class="service-card-body"><div class="service-icon">🏠</div><h3>التنظيف العميق</h3><p>تنظيف شامل للمنازل والفلل والقصور بأحدث المعدات ومواد تعقيم آمنة على الصحة.</p><span class="service-link">اعرف أكثر ←</span></div></a>
+    <a href="services/pest-control/index.html" class="service-card fade-in"><img src="images/services/pest-control-card.jpg" alt="مكافحة الحشرات والقوارض" class="service-card-img" loading="lazy"><div class="service-card-body"><div class="service-icon">🛡️</div><h3>مكافحة الحشرات والقوارض</h3><p>القضاء التام على الحشرات والقوارض بأفضل الطرق العلمية مع ضمان موثق.</p><span class="service-link">اعرف أكثر ←</span></div></a>
+    <a href="services/tanks/index.html" class="service-card fade-in"><img src="images/services/tanks-card.jpg" alt="تنظيف الخزانات" class="service-card-img" loading="lazy"><div class="service-card-body"><div class="service-icon">💧</div><h3>تنظيف الخزانات</h3><p>تنظيف وتعقيم خزانات المياه العلوية والأرضية لضمان مياه نظيفة وصحية لأسرتك.</p><span class="service-link">اعرف أكثر ←</span></div></a>
+    <a href="services/ac-curtains/index.html" class="service-card fade-in"><img src="images/services/ac-curtains-card.jpg" alt="تنظيف المكيفات والستائر" class="service-card-img" loading="lazy"><div class="service-card-body"><div class="service-icon">❄️</div><h3>تنظيف المكيفات والستائر</h3><p>تنظيف المكيفات بالبخار للحصول على هواء نقي وخالٍ من الجراثيم والأتربة.</p><span class="service-link">اعرف أكثر ←</span></div></a>
+    <a href="services/sofa/index.html" class="service-card fade-in"><img src="images/services/sofa-card.jpg" alt="تنظيف المجالس والكنب" class="service-card-img" loading="lazy"><div class="service-card-body"><div class="service-icon">🛋️</div><h3>تنظيف المجالس والكنب</h3><p>إزالة البقع والأوساخ العميقة من المجالس والكنب بأساليب متخصصة تحافظ على جودة القماش.</p><span class="service-link">اعرف أكثر ←</span></div></a>
+    <a href="services/floors/index.html" class="service-card fade-in"><img src="images/services/floors-card.jpg" alt="تنظيف الأرضيات والحوائط" class="service-card-img" loading="lazy"><div class="service-card-body"><div class="service-icon">✨</div><h3>تنظيف الأرضيات والحوائط</h3><p>تلميع الأرضيات وتنظيف الحوائط بأحدث المعدات المتخصصة للحصول على لمعان مثالي.</p><span class="service-link">اعرف أكثر ←</span></div></a>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="section-header fade-in">
+    <span class="section-label">كيف نعمل</span>
+    <h2>خطوات <span>بسيطة وواضحة</span></h2>
+    <p>من أول تواصل لحد ما تشوف النتيجة — رحلة سلسة بدون تعقيد</p>
+    <div class="divider"></div>
+  </div>
+  <div class="timeline-track">
+    <div class="timeline-step">
+      <div class="timeline-circle"><span class="timeline-num">1</span>📞</div>
+      <h3>تواصل معنا</h3>
+      <p>راسلنا واتساب أو اتصل، وحدد نوع الخدمة والموقع</p>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-circle"><span class="timeline-num">2</span>📋</div>
+      <h3>المعاينة والتسعير</h3>
+      <p>نحدد التفاصيل ونديك سعر واضح بدون مفاجآت</p>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-circle"><span class="timeline-num">3</span>🧽</div>
+      <h3>التنفيذ الاحترافي</h3>
+      <p>فريقنا المدرب ينفّذ الخدمة بأحدث المعدات والمواد الآمنة</p>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-circle"><span class="timeline-num">4</span>✅</div>
+      <h3>التسليم والضمان</h3>
+      <p>نراجع معاك النتيجة، ونضمن رضاك الكامل عن الخدمة</p>
+    </div>
   </div>
 </section>
 
