@@ -57,6 +57,8 @@
     .hero p{font-size:1.05rem;color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:40px;animation:fadeInUp 0.8s ease 0.3s both;font-weight:300}
     .hero-tagline-mobile{display:none}
     .hero-trust-mobile{display:none}
+    .hero-stats-top{display:none}
+    .hero-feature-chip{display:none}
     .hero-btns{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp 0.8s ease 0.4s both}
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--turquoise),var(--turquoise-light));color:var(--navy-dark);padding:15px 32px;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(43,168,160,0.35)}
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(43,168,160,0.5)}
@@ -126,17 +128,27 @@
       nav{display:none}
       nav.open{display:flex;flex-direction:column;position:fixed;top:75px;right:0;left:0;background:var(--navy-dark);padding:30px 5%;gap:20px;border-top:1px solid rgba(255,255,255,0.1)}
       .hamburger{display:flex}
-      .hero{min-height:82vh;background:linear-gradient(to top,rgba(8,28,48,0.97) 0%,rgba(8,28,48,0.88) 30%,rgba(8,28,48,0.3) 56%,transparent 70%),url('images/hero-bg.jpg');background-size:cover;background-position:center;position:relative;padding:0;overflow:hidden}
-      .hero-content{position:absolute;bottom:0;right:0;left:0;max-width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 6% 40px}
+      .hero{min-height:92vh;background:linear-gradient(to top,rgba(8,28,48,0.97) 0%,rgba(8,28,48,0.88) 28%,rgba(8,28,48,0.35) 52%,rgba(8,28,48,0.55) 100%),url('images/hero-bg.jpg');background-size:cover;background-position:center;position:relative;padding:0;overflow:hidden}
+      .hero-stats-top{display:flex;justify-content:center;gap:10px;padding:18px 4% 0}
+      .hero-stats-top .stat-chip{background:rgba(8,28,48,0.55);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:6px 12px;text-align:center;flex:1;max-width:120px}
+      .hero-stats-top .stat-chip b{display:block;color:var(--turquoise-light);font-size:0.85rem;font-weight:800}
+      .hero-stats-top .stat-chip span{display:block;color:rgba(255,255,255,0.8);font-size:0.62rem}
+      .hero-feature-chip{position:absolute;background:rgba(8,28,48,0.55);backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,0.15);border-radius:30px;padding:7px 14px;font-size:0.72rem;font-weight:600;color:#fff;display:flex;align-items:center;gap:6px;white-space:nowrap}
+      .chip-1{top:120px;right:6%}
+      .chip-2{top:220px;left:4%}
+      .chip-3{top:320px;right:8%}
+      .hero-content{position:absolute;bottom:0;right:0;left:0;max-width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 6% 132px}
       .hero-badge{position:static;transform:none;margin:0 0 14px;font-size:0.66rem;padding:6px 14px;white-space:normal;max-width:90%}
       .hero h1{font-size:1.7rem;margin-bottom:10px}
       .hero p{display:none}
-      .hero-tagline-mobile{display:block;color:rgba(255,255,255,0.88);font-size:0.92rem;line-height:1.6;margin-bottom:10px}
+      .hero p.hero-tagline-mobile{display:block;color:rgba(255,255,255,0.88);font-size:0.92rem;line-height:1.6;margin-bottom:10px}
       .hero-trust-mobile{display:flex;align-items:center;gap:6px;color:var(--turquoise-light);font-size:0.78rem;font-weight:600;margin-bottom:20px}
       .hero-btns{width:100%;flex-wrap:nowrap;gap:10px;justify-content:center}
       .hero-btns a{min-width:0!important;flex:1 1 0;padding:13px 8px!important;font-size:0.82rem;white-space:nowrap}
       .hero-btns a svg{width:15px;height:15px;flex-shrink:0}
       .hero-stats{display:none}
+      .whatsapp-float{bottom:98px}
+      .phone-float{bottom:168px}
     }
     /* Footer light text on navy bg */
     .footer-nav a{color:#fff!important}
@@ -171,6 +183,14 @@
 </header>
 
 <section class="hero">
+  <div class="hero-stats-top">
+    <div class="stat-chip"><b>+500</b><span>عميل راضٍ</span></div>
+    <div class="stat-chip"><b>5+</b><span>سنوات خبرة</span></div>
+    <div class="stat-chip"><b>24/7</b><span>خدمة متواصلة</span></div>
+  </div>
+  <div class="hero-feature-chip chip-1">✅ فريق معتمد</div>
+  <div class="hero-feature-chip chip-2">🧴 مواد آمنة 100%</div>
+  <div class="hero-feature-chip chip-3">⏱️ خدمة خلال ساعات</div>
   <div class="hero-content">
     <div class="hero-badge">⭐ خصم 30% على جميع خدماتنا</div>
     <h1>نظافة <span>استثنائية</span><br>تليق بمنزلك</h1>
