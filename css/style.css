@@ -104,7 +104,7 @@ section{padding:90px 5%}
 .fade-in.visible{opacity:1;transform:translateY(0)}
 
 /* PROCESS TIMELINE */
-.timeline-section{padding:90px 5%;background:var(--white)}
+.timeline-section{padding:90px 5%;background:#eef3f6}
 .timeline-track{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1100px;margin:60px auto 0;position:relative}
 .timeline-track::before{content:'';position:absolute;top:58px;right:12.5%;left:12.5%;height:2px;background:linear-gradient(to left,var(--navy),var(--turquoise));z-index:0;transform:scaleX(0);transform-origin:right;transition:transform 1.2s ease 0.3s}
 .timeline-track.visible::before{transform:scaleX(1)}
@@ -176,3 +176,5 @@ footer{background:var(--navy-dark);color:#fff;padding:22px 5%}
 
   .page-hero{padding:110px 5% 50px}
 }
+
+.section-divider{height:14px;background:linear-gradient(100deg,var(--navy),var(--turquoise));clip-path:polygon(0 65%,100% 0,100% 35%,0 100%)}
