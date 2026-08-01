@@ -106,7 +106,8 @@
     .cta-section::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(43,168,160,0.1),transparent 70%);border-radius:50%}
     .cta-section h2{font-family:'Cairo',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);color:var(--white);margin-bottom:16px}
     .cta-section p{color:rgba(255,255,255,0.75);font-size:1rem;margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
-    .cta-phone{font-family:'Cairo',sans-serif;font-size:2rem;color:var(--turquoise-light);text-decoration:none;margin-bottom:30px;display:block}
+    .cta-phone{font-family:'Cairo',sans-serif;font-size:2rem;color:var(--turquoise-light);text-decoration:none;margin-bottom:30px;display:inline-block;animation:cta-pulse 2.6s ease-in-out infinite}
+    @keyframes cta-pulse{0%,100%{transform:scale(1);text-shadow:0 0 0 rgba(43,168,160,0)}50%{transform:scale(1.045);text-shadow:0 0 18px rgba(43,168,160,0.5)}}
     .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
     .whatsapp-float{position:fixed;bottom:28px;left:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,0.4);z-index:9999;transition:transform 0.3s;animation:pulse 2.5s infinite}
     .whatsapp-float:hover{transform:scale(1.1)}
