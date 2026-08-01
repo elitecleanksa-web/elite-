@@ -56,6 +56,7 @@
     .hero h1 span{color:var(--turquoise-light)}
     .hero p{font-size:1.05rem;color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:40px;animation:fadeInUp 0.8s ease 0.3s both;font-weight:300}
     .hero-tagline-mobile{display:none}
+    .hero-features-strip{display:none}
     .hero-btns{display:flex;gap:16px;flex-wrap:wrap;animation:fadeInUp 0.8s ease 0.4s both}
     .btn-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--turquoise),var(--turquoise-light));color:var(--navy-dark);padding:15px 32px;border-radius:50px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(43,168,160,0.35)}
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(43,168,160,0.5)}
@@ -133,7 +134,13 @@
       .hero-btns{width:100%;flex-wrap:nowrap;gap:10px;justify-content:center}
       .hero-btns a{min-width:0!important;flex:1 1 0;padding:14px 10px!important;font-size:0.85rem;white-space:nowrap}
       .hero-btns a svg{width:16px;height:16px;flex-shrink:0}
-      .hero-stats{display:none}
+      .hero-features-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:22px}
+      .hero-features-strip span{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:7px 14px;font-size:0.72rem;font-weight:600;color:rgba(255,255,255,0.9);opacity:0;animation:fadeInUp 0.6s ease both}
+      .hero-features-strip span:nth-child(1){animation-delay:0.5s}
+      .hero-features-strip span:nth-child(2){animation-delay:0.65s}
+      .hero-features-strip span:nth-child(3){animation-delay:0.8s}
+      .hero-stats{display:flex;justify-content:center;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.15);opacity:0;animation:fadeInUp 0.7s ease 0.95s both}
+      .stat-item{min-width:80px}
     }
     /* Footer light text on navy bg */
     .footer-nav a{color:#fff!important}
@@ -179,6 +186,11 @@
         تواصل عبر واتساب
       </a>
       <a href="tel:+9665XXXXXXXX" class="btn-primary" style="padding:15px 32px;min-width:190px;justify-content:center">📞اتصل الآن هاتفيا</a>
+    </div>
+    <div class="hero-features-strip">
+      <span>✅ ضمان الرضا</span>
+      <span>🧴 مواد آمنة 100%</span>
+      <span>⚡ رد خلال دقائق</span>
     </div>
     <div class="hero-stats">
       <div class="stat-item"><span class="stat-num">+500</span><span class="stat-label">عميل راضٍ</span></div>
