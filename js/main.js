@@ -9,7 +9,7 @@ if (hamburger) {
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.15 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in, .timeline-track').forEach(el => observer.observe(el));
 
 // Header scroll effect
 window.addEventListener('scroll', () => {
