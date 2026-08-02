@@ -105,7 +105,7 @@ section{padding:90px 5%}
 
 /* PROCESS TIMELINE */
 .timeline-section{padding:90px 5%;background:var(--white)}
-.timeline-track{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1100px;margin:60px auto 0;position:relative}
+.timeline-track{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1100px;margin:42px auto 0;position:relative}
 .timeline-track::before{content:'';position:absolute;top:58px;right:12.5%;left:12.5%;height:2px;background:linear-gradient(to left,var(--navy),var(--turquoise));z-index:0;transform:scaleX(0);transform-origin:right;transition:transform 1.2s ease 0.3s}
 .timeline-track.visible::before{transform:scaleX(1)}
 .timeline-step{position:relative;z-index:1;text-align:center;background:linear-gradient(160deg,var(--navy),var(--navy-dark));border-radius:14px;padding:34px 22px;box-shadow:0 8px 24px rgba(14,42,74,0.15);transition:opacity 0.6s ease,transform 0.6s ease,box-shadow 0.3s;opacity:0;transform:translateY(20px)}
