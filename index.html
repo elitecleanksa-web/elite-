@@ -63,6 +63,10 @@
     .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--white);padding:15px 32px;border-radius:50px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1px solid rgba(255,255,255,0.3);transition:all 0.3s}
     .btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.6)}
     .hero-stats{display:flex;gap:40px;margin-top:60px;padding-top:40px;border-top:1px solid rgba(255,255,255,0.1);animation:fadeInUp 0.8s ease 0.5s both}
+    .hero-urgency{margin-top:22px;font-size:0.85rem;font-weight:600;color:#ffb020;opacity:0;animation:fadeInUp 0.7s ease 0.75s both}
+    .hero-urgency span,.hero-urgency{display:inline-block}
+    .urgency-fire{display:inline-block;font-style:normal;animation:fire-pulse 1.4s ease-in-out infinite}
+    @keyframes fire-pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
     .stat-item{text-align:center}
     /* ===== تعديل 2: أرقام بستايل الـ badge ===== */
     .stat-num{font-family:'Cairo',sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:1px;background:rgba(43,168,160,0.15);border:1px solid rgba(43,168,160,0.4);color:var(--turquoise-light);padding:5px 16px;border-radius:30px;display:inline-block;margin-bottom:8px}
@@ -93,16 +97,22 @@
     .feature-icon{font-size:2.2rem;margin-bottom:14px;display:block}
     .feature-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:8px}
     .feature-card p{font-size:0.85rem;color:rgba(255,255,255,0.72);line-height:1.7}
-    .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-    .testimonial-card{background:var(--white);border-radius:14px;padding:28px;border:1px solid var(--border);position:relative}
-    .testimonial-card::before{content:'"';position:absolute;top:16px;left:24px;font-family:'Cairo',sans-serif;font-size:4rem;color:var(--navy-light);opacity:0.15;line-height:1}
-    .stars{color:var(--turquoise);font-size:0.9rem;margin-bottom:14px}
-    .testimonial-card p{font-size:0.9rem;color:var(--text-mid);line-height:1.8;margin-bottom:20px}
-    .reviewer{display:flex;align-items:center;gap:12px}
-    .reviewer-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-light));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.9rem}
-    .reviewer-name{font-weight:700;font-size:0.9rem;color:var(--text-dark)}
-    .reviewer-title{font-size:0.75rem;color:var(--text-light)}
+    /* TESTIMONIALS */
+    .testimonials-section{padding:90px 5%;background:var(--white)}
+    .testimonials-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:10px 2% 20px;max-width:1200px;margin:50px auto 0;-ms-overflow-style:none;scrollbar-width:none}
+    .testimonials-track::-webkit-scrollbar{display:none}
+    .testimonial-card{scroll-snap-align:start;flex:0 0 calc(33.333% - 16px);min-width:280px;background:linear-gradient(160deg,var(--navy),var(--navy-dark));border-radius:16px;padding:30px 26px;box-shadow:0 8px 24px rgba(14,42,74,0.12)}
+    .testi-stars{font-size:0.9rem;margin-bottom:14px;letter-spacing:2px}
+    .testimonial-card p{color:rgba(255,255,255,0.85);font-size:0.9rem;line-height:1.9;margin-bottom:20px;min-height:100px}
+    .testi-author{display:flex;flex-direction:column;gap:2px;border-top:1px solid rgba(255,255,255,0.12);padding-top:14px}
+    .testi-name{color:#fff;font-weight:700;font-size:0.88rem}
+    .testi-city{color:var(--turquoise-light);font-size:0.75rem}
+    .testi-dots{display:flex;justify-content:center;gap:8px;margin-top:26px}
+    .testi-dots span{width:8px;height:8px;border-radius:50%;background:rgba(14,42,74,0.2);cursor:pointer;transition:all 0.3s}
+    .testi-dots span.active{background:var(--navy);width:22px;border-radius:5px}
+
     .cta-section{background:linear-gradient(135deg,var(--navy-dark),var(--navy));text-align:center;position:relative;overflow:hidden}
+
     .cta-section::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(43,168,160,0.1),transparent 70%);border-radius:50%}
     .cta-section h2{font-family:'Cairo',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);color:var(--white);margin-bottom:16px}
     .cta-section p{color:rgba(255,255,255,0.75);font-size:1rem;margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
@@ -141,6 +151,8 @@
       .hero-features-strip span:nth-child(2){animation-delay:0.65s}
       .hero-features-strip span:nth-child(3){animation-delay:0.8s}
       .hero-stats{display:flex;justify-content:center;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.15);opacity:0;animation:fadeInUp 0.7s ease 0.95s both}
+      .hero-urgency{margin-top:16px;font-size:0.78rem;animation-delay:1.1s}
+      .testimonial-card{flex:0 0 88%;min-width:0}
       .stat-item{min-width:80px}
     }
     /* Footer light text on navy bg */
@@ -198,6 +210,7 @@
       <div class="stat-item"><span class="stat-num">5+</span><span class="stat-label">سنوات خبرة</span></div>
       <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-label">خدمة متواصلة</span></div>
     </div>
+    <div class="hero-urgency"><i class="urgency-fire">🔥</i> العرض ينتهي قريبًا — احجز الآن واستفد بالخصم</div>
   </div>
 
 </section>
@@ -250,6 +263,44 @@
       <p>نراجع معاك النتيجة، ونضمن رضاك الكامل عن الخدمة</p>
     </div>
   </div>
+</section>
+<div class="section-divider"></div>
+
+<section class="testimonials-section">
+  <div class="section-header fade-in">
+    <span class="section-label">آراء عملائنا</span>
+    <h2>ثقة <span>عملائنا</span> أهم إنجاز</h2>
+    <p>آراء حقيقية من عملائنا في الرياض</p>
+    <div class="divider"></div>
+  </div>
+  <div class="testimonials-track" id="testiTrack">
+    <div class="testimonial-card">
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <p>"مبدعين للأمانة، شغلهم نظيف، وأشكر الأستاذ أبو حازم والشباب اللي كانوا معاه، متعاونين ومتجاوبين. أنصح بالتعامل معاهم في شغل التنظيف."</p>
+      <div class="testi-author"><span class="testi-name">سلطان الدوسري</span><span class="testi-city">منازل وفلل، الرياض</span></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <p>"شركة راقية، تنظيف احترافي، تعامل رائع، أسعار ممتازة، مواعيد دقيقة."</p>
+      <div class="testi-author"><span class="testi-name">ساير الخالدي</span><span class="testi-city">شركات ومكاتب، الرياض</span></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <p>"ماشاء الله شركة ممتازة وتعاملهم راقي جداً، وتنظيفهم بالمكينات وبأعلى جودة واحترافية، ويهتموا بأدق التفاصيل في الشغل. بالتوفيق إن شاء الله."</p>
+      <div class="testi-author"><span class="testi-name">عبدالله الشمراني</span><span class="testi-city">منازل وفلل، الرياض</span></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <p>"شغلهم منظم واحترافي جداً جداً، والمواد اللي يستخدموها ممتازة جداً، وعمالهم محترفين جداً. شركة النخبة خيارك الأفضل."</p>
+      <div class="testi-author"><span class="testi-name">حاتم القحطاني</span><span class="testi-city">مكافحة حشرات، الرياض</span></div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <p>"أشكر شركة النخبة للنظافة على التعامل الراقي والشغل الممتاز، والشكر الخاص جداً للمشرف أبو حازم — إنسان في قمة الذوق والاحترام. أنصحكم بالتعامل معاهم."</p>
+      <div class="testi-author"><span class="testi-name">محمد اليامي</span><span class="testi-city">منازل وفلل، الرياض</span></div>
+    </div>
+  </div>
+  <div class="testi-dots" id="testiDots"></div>
 </section>
 <div class="section-divider"></div>
 
@@ -320,6 +371,38 @@
     const header = document.querySelector('header');
     if (header) header.style.height = window.scrollY > 60 ? '62px' : '75px';
   });
+
+  // Testimonials carousel
+  const track = document.getElementById('testiTrack');
+  const dotsWrap = document.getElementById('testiDots');
+  if (track && dotsWrap) {
+    const cards = track.querySelectorAll('.testimonial-card');
+    cards.forEach((_, i) => {
+      const dot = document.createElement('span');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => {
+        track.scrollTo({ left: cards[i].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+      });
+      dotsWrap.appendChild(dot);
+    });
+    const dots = dotsWrap.querySelectorAll('span');
+    function updateActiveDot() {
+      let closest = 0, minDiff = Infinity;
+      cards.forEach((c, i) => {
+        const diff = Math.abs(c.offsetLeft - track.offsetLeft - track.scrollLeft);
+        if (diff < minDiff) { minDiff = diff; closest = i; }
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+      return closest;
+    }
+    track.addEventListener('scroll', () => { updateActiveDot(); }, { passive: true });
+    let autoIndex = 0;
+    let autoTimer = setInterval(() => {
+      autoIndex = (autoIndex + 1) % cards.length;
+      track.scrollTo({ left: cards[autoIndex].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    }, 4000);
+    track.addEventListener('pointerdown', () => { clearInterval(autoTimer); });
+  }
 </script>
 </body>
 </html>
