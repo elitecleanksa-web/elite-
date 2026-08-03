@@ -18,9 +18,12 @@
 
   <!-- المدونة -->
   <url><loc>https://alnokhba.online/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alnokhba.online/blog/best-home-cleaning-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alnokhba.online/blog/best-sofa-cleaning-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://alnokhba.online/blog/best-deep-cleaning-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://alnokhba.online/blog/best-pest-control-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://alnokhba.online/blog/best-tank-cleaning-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://alnokhba.online/blog/best-ac-cleaning-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://alnokhba.online/blog/best-sofa-cleaning-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://alnokhba.online/blog/best-floors-cleaning-riyadh/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 
   <!-- صفحات قانونية -->
   <url><loc>https://alnokhba.online/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
